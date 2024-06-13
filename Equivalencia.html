@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equivalencia de Unidades</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body style="background-image: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);">
+    <audio src="Sonidos/Solo-una-Vez.mp3" autoplay></audio>
+    <header class="cabe-equi">
+        <h1>Equivalencia de Unidades</h1>
+    </header>
+    <div class="ope-equi">
+        <div class="ope">
+            <h1>Introduce los Kilometros</h1>
+            <br>
+            <input class="numer" id="km" type="number"> <br><br>
+            <button onclick="kim()" id="e_km" class="boto-ope">CALCULAR</button><br><br>
+            <h1>Equivale a:</h1><br>
+            <br>
+            <input class="numer" id="centi" type="number"><br><br>
+            <h1>Centimetros</h1>
+        </div>
+        <div id="ope2" class="ope">
+            <h1>Introduce los Litros</h1>
+            <br>
+            <input class="numer" id="lit" type="number"> <br><br>
+            <button onclick="li()" id="e_li" class="boto-ope">CALCULAR</button><br><br>
+            <h1>Equivale a:</h1><br>
+            <br>
+            <input class="numer" id="mili" type="number"><br><br>
+            <h1>Mililitros</h1>
+        </div>
+        <div id="ope3" class="ope">
+            <h1>Introduce las Yardas</h1>
+            <br>
+            <input class="numer" id="yar" type="number"> <br><br>
+            <button onclick="yar()" id="e_yar" class="boto-ope">CALCULAR</button><br><br>
+            <h1>Equivale a:</h1><br>
+            <br>
+            <input class="numer" id="pie" type="number"><br><br>
+            <h1>Pies</h1>
+        </div>
+    </div>
+    <div class="vol-13">
+        <a href="Programas-Matemáticos.html"><b>Regresar</b></a>
+    </div>
+    <script>
+        function kim(){
+            var num1 = document.getElementById('km').value;
+            var num1_convert = parseFloat(num1);
+            var respuest1 = num1_convert * 1000000;
+            document.getElementById('centi').value = respuest1;
+        }
+        function li(){
+            var num2 = document.getElementById('lit').value;
+            var num2_convert = parseFloat(num2);
+            var respuest2 = num2_convert * 1000;
+            document.getElementById('mili').value = respuest2;
+        }
+        function yar(){
+            var num3 = document.getElementById('yar').value;
+            var num3_convert = parseFloat(num3);
+            var respuest3 = num3_convert * 3;
+            document.getElementById('pie').value = respuest3;
+        }
+    </script>
+</body>
+</html>
